@@ -39,9 +39,9 @@ countries <- tibble(country_name = country_names) |>
 # =============================================================================
 
 dbnomics_variables <- tribble(
-  ~variable_name,       ~provider, ~dataset,    ~series_pattern,              ~description,
-  "gdp_growth",         "OECD",    "QNA",       "{country}.B1_GE.GPSA.Q",    "Real GDP growth rate, seasonally adjusted",
-  "unemployment_rate",  "OECD",    "STLABOUR",  "{country}.LRHUTTTT.STSA.Q", "Harmonized unemployment rate, seasonally adjusted"
+  ~source, ~dbnomics_id,                              ~countrycode_type, ~variable_name,      ~description,
+  "OECD",  "OECD/QNA/{countrycode}.B1_GE.GPSA.Q",    "iso3c",           "gdp_growth",        "Real GDP growth rate, seasonally adjusted",
+  "OECD",  "OECD/MEI/{countrycode}.LRHUTTTT.STSA.Q", "iso3c",           "unemployment_rate", "Harmonized unemployment rate, seasonally adjusted"
 )
 
 # =============================================================================
