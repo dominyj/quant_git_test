@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 .Rprofile
+*/.DS_Store
 data/raw/*
+data/raw_backup/*
