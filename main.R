@@ -29,16 +29,17 @@ source(here("R/functions/all_functions.R"))
 
 source(here("R/00_setup_metadata.R"))
 
-# =============================================================================
 # Step 01: Import Data
 # =============================================================================
 # WARNING: Downloads NEW data from DBnomics and OVERWRITES data/raw/
-# Original data is preserved in data/raw_original/ (read-only backup)
+# - Prompts for user confirmation before downloading
+# - Creates timestamped backup in data/raw_backup/ before updating
+# - Original data remains in data/raw_original/ (read-only)
 #
 # This step is COMMENTED OUT by default to prevent accidental data overwriting.
 # To download fresh data: uncomment the line below
 
-# prompt_data_download()
+# update_data_from_dbnomics()
 
 # =============================================================================
 # Step 02: Clean Data
